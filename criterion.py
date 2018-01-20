@@ -4,7 +4,7 @@
 from collections import Counter
 import numpy as np
 
-def calculate_criterion(data, feature, target, criterion):
+def calc_criterion(data, feature, target, criterion):
     """
     Returns calculated criterion for a given feature.
 
@@ -19,11 +19,11 @@ def calculate_criterion(data, feature, target, criterion):
     calculated criterion
     """
     if criterion == 'entropy':
-        return calculate_entropy(data, feature, target)
+        return calc_entropy(data, feature, target)
     else:
         pass
 
-def calculate_entropy(data, feature, target):
+def calc_entropy(data, feature, target):
     """
     Calculates entropy for a given feature.
 
@@ -51,7 +51,7 @@ def calculate_entropy(data, feature, target):
 
     return np.dot(entropies, weights)
 
-def calculate_probs(target):
+def calc_probs(target):
     """
     Calculates probabilites for each class withint the given data subset
 

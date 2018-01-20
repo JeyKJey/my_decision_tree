@@ -15,7 +15,6 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
 
         self.min_samples_split = min_samples_split
         self.criterion = criterion
-        self.tree = None
 
     def fit(self, data, target):
         """Builds a decision tree classifier from the training set (data, target).
@@ -48,7 +47,7 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
             The predicted classes
         """
         try:
-            getattr(self, "tree_")
+            getattr(self, "tree")
             predicts_proba = self.predict_proba(data)
             predicts = _classify_from_probs(predicts_proba)
 
@@ -69,7 +68,7 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         The predicted probabilities of belogning to each class
         """
         try:
-            getattr(self, "tree_")
+            getattr(self, "tree")
             predicts = [self.tree.traverse(row) for name, row in data.iterrows()]
 
         except AttributeError:
