@@ -1,7 +1,7 @@
 """This module creates and expands a tree """
 
 import numpy as np
-from criterion import calculate_criterion, count_probabilities
+from criterion import calc_criterion, calc_probs
 
 class TreeGrower():
     """Class to expand the tree."""
@@ -54,10 +54,10 @@ class TreeGrower():
 
         # if node is pure or min_samples_split is achieved
         if len(data) <= self.min_samples_split or len(np.unique(target)) == 1 or not features:
-            probs = count_probabilities(target)
+            probs = calc_probs(target)
             return {'Node type': 'Leaf', 'prob_value': probs}
 
-        feats_entropy = [calculate_criterion(data, feat, target, self.criterion)
+        feats_entropy = [calc_criterion(data, feat, target, self.criterion)
                          for feat in features]
 
         feat_split = features[np.argmin(feats_entropy)]
