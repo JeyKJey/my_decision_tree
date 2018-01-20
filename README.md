@@ -1,6 +1,6 @@
 ## My Decision Tree
 
-Implementation of a decision tree algorithm from scratch.
+Implementation of a decision tree algorithm for classification from scratch.
 
 Done:
 * Entropy
@@ -14,3 +14,4 @@ TODO:
 * splitter
 * BFS
 * splitter
+* Criterion as a class
