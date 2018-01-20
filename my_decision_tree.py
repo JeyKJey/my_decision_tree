@@ -48,11 +48,11 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         """
         try:
             getattr(self, "tree")
-            predicts_proba = self.predict_proba(data)
-            predicts = _classify_from_probs(predicts_proba)
-
         except AttributeError:
             raise RuntimeError("You must train classifer before predicting data!")
+
+        predicts_proba = self.predict_proba(data)
+        predicts = _classify_from_probs(predicts_proba)
         return predicts
 
     def predict_proba(self, data):
@@ -69,12 +69,11 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         """
         try:
             getattr(self, "tree")
-            predicts = [self.tree.traverse(row) for name, row in data.iterrows()]
-
         except AttributeError:
             raise RuntimeError("You must train classifer before predicting data!")
-        return predicts
 
+        predicts = [self.tree.traverse(row) for name, row in data.iterrows()]
+        return predicts
 
 def _classify_from_probs(predicts_proba):
     """Utility function to extract class from the probabilities"""
