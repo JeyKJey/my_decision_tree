@@ -65,7 +65,7 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         Returns
         -------
         predicts_proba : array of shape = [n_samples]
-        The predicted probabilities of belogning to each class
+            The predicted probabilities of belogning to each class
         """
         try:
             getattr(self, "tree")
