@@ -21,7 +21,6 @@ class TreeGrower():
         ----------
         data : array_like matrix, shape = [n_samples, n_features]
         target : array, shape = [n_samples]
-
         features : array, shape = [n_features]
 
         Returns
@@ -42,9 +41,7 @@ class TreeGrower():
         Parameters
         ----------
         data : array_like matrix, shape = [n_samples, n_features]
-
         target : array, shape = [n_samples]
-
         features : array, shape = [n_features]
 
         Returns
