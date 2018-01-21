@@ -8,10 +8,10 @@ Done:
 * DFS
 
 TODO:
+* testing
 * Gini index
 * max_depth
 * pruning
-* splitter
 * BFS
 * splitter
 * Criterion as a class
