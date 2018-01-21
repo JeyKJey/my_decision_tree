@@ -43,7 +43,7 @@ def calc_entropy(data, feature, target):
         y_loc = target[data[feature] == unique_value]
 
         probs = np.array(list(Counter(y_loc).values()))/len(y_loc)
-        entropy = - np.dot(probs, np.log2(probs)).sum()
+        entropy = - np.dot(probs, np.log2(probs))
         entropies = np.append(entropies, entropy)
 
         weight = len(y_loc)/len(target)
