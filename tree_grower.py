@@ -54,7 +54,7 @@ class TreeGrower():
         """
 
         # if node is pure or min_samples_split is achieved
-        if len(data) <= self.min_samples_split or len(np.unique(target)) == 1 or not features:
+        if not expand_node():
             probs = calc_probs(target)
             return {'Node type': 'Leaf', 'prob_value': probs}
 
@@ -77,6 +77,9 @@ class TreeGrower():
                 'feat_vals': feat_vals,
                 'nodes': nodes
                }
+
+    def expand_node(self, tagert, data, features):
+        return len(data) <= self.min_samples_split or len(np.unique(target)) == 1 or not features
 
     def traverse(self, row):
         """
