@@ -4,14 +4,18 @@ import numpy as np
 from criterion import calc_criterion, calc_probs
 
 class TreeGrower():
-    """Class to expand the tree."""
+    """
+    Expand the tree with the criterions.
+
+    :min_samples_split: Number of minimum samples to expkand the node.
+    :criterion: Criterion for evaluation (gini, entropy)
+    """
 
     def __init__(self,
                  min_samples_split,
                  criterion):
         self.min_samples_split = min_samples_split
         self.criterion = criterion
-        self.tree = None
 
     def grow(self, data, target, features):
         """
