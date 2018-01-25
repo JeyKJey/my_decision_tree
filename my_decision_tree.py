@@ -17,7 +17,8 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         self.criterion = criterion
 
     def fit(self, data, target):
-        """Builds a decision tree classifier from the training set (data, target).
+        """
+        Build a decision tree classifier from the training set (data, target).
 
         Parameters
         ----------
@@ -35,7 +36,8 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         return self
 
     def predict(self, data):
-        """Predicts class for the samples from data.
+        """
+        Predict class for the samples from data.
 
         Parameters
         ----------
@@ -56,7 +58,8 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
         return predicts
 
     def predict_proba(self, data):
-        """Predicts probabilities belogning to each class for the samples from data.
+        """
+        Predict probabilities belogning to each class for the samples from data.
 
         Parameters
         ----------
@@ -78,7 +81,7 @@ class MyDecisionTree(BaseEstimator, ClassifierMixin):
 def _classify_from_probs(predicts_proba):
     """Utility function to extract class from the probabilities"""
     def find_majority(dict_probs):
-        """Finds the majority class"""
+        """Find the majority class"""
         # if there is no majority class, pick the first from the sorted
         max_val = max(dict_probs.values())
         max_keys = [key for key in dict_probs.keys()

@@ -6,7 +6,7 @@ import numpy as np
 
 def calc_criterion(data, feature, target, criterion):
     """
-    Returns calculated criterion for a given feature.
+    Return calculated criterion for a given feature.
 
     Parameters
     ----------
@@ -25,7 +25,7 @@ def calc_criterion(data, feature, target, criterion):
 
 def calc_entropy(data, feature, target):
     """
-    Calculates entropy for a given feature.
+    Calculate entropy for a given feature.
 
     Parameters
     ----------
@@ -53,7 +53,7 @@ def calc_entropy(data, feature, target):
 
 def calc_probs(target):
     """
-    Calculates probabilites for each class withint the given data subset
+    Calculate probabilites for each class withint the given data subset
 
     Parameters
     ----------

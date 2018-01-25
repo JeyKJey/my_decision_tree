@@ -15,7 +15,7 @@ class TreeGrower():
 
     def grow(self, data, target, features):
         """
-        Returns tree structure in form of a dictionary.
+        Return tree structure in form of a dictionary.
 
         Parameters
         ----------
@@ -32,8 +32,8 @@ class TreeGrower():
 
     def split_node(self, data, target, features):
         """
-        Returns the node description.
-        For inner node returns:
+        Return the node description.
+        For inner node return:
             feature on which the node was splited,
             unique values of the feature,
             children nodes
@@ -76,7 +76,7 @@ class TreeGrower():
 
     def traverse(self, row):
         """
-        Returns probabilities of a sample belogning to classes
+        Return probabilities of a sample belogning to classes
 
         Parameters
         ----------
